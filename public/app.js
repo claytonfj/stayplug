@@ -103,8 +103,8 @@ let brandById = new Map();
 
 async function load() {
   const [b, p] = await Promise.all([
-    fetch('data/brands.json').then((r) => r.json()),
-    fetch('data/products.json').then((r) => r.json()),
+    fetch('data/brands.json', { cache: 'no-cache' }).then((r) => r.json()),
+    fetch('data/products.json', { cache: 'no-cache' }).then((r) => r.json()),
   ]);
   BRANDS = b.brands.slice().sort((x, y) => x.name.localeCompare(y.name, 'fr'));
   brandById = new Map(BRANDS.map((x) => [x.id, x]));

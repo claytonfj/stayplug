@@ -1,6 +1,6 @@
 // Cache hors-ligne : l'interface en priorité depuis le cache, les données
 // depuis le réseau (avec repli sur le cache), les images en cache.
-const VERSION = 'stayplug-v16';
+const VERSION = 'stayplug-v17';
 const SHELL = ['./', 'index.html', 'app.css', 'app.js', 'logo.png', 'manifest.webmanifest', 'icons/favicon-32.png', 'icons/favicon-96.png', 'icons/icon-180.png', 'icons/icon-192.png'];
 const IMG_CACHE = 'stayplug-img';
 const IMG_MAX = 300;
@@ -20,7 +20,9 @@ self.addEventListener('activate', (e) => {
 async function networkFirst(req) {
   const cache = await caches.open(VERSION);
   try {
-    const res = await fetch(req);
+    // no-cache : le téléphone revérifie auprès du serveur au lieu de garder
+    // les données 10 min (GitHub Pages envoie max-age=600).
+    const res = await fetch(req, { cache: 'no-cache' });
     if (res.ok) cache.put(req, res.clone());
     return res;
   } catch {
