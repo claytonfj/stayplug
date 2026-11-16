@@ -1,0 +1,17 @@
+{
+  "name": "stayplug",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Toutes tes marques de vêtements Instagram au même endroit.",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "demo": "node scripts/make-demo.mjs",
+    "import": "node scripts/import-instagram.mjs",
+    "fetch": "node scripts/fetch-products.mjs",
+    "logos": "node scripts/fetch-logos.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

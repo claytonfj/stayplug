@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>StayPlug</title>
+  <meta name="description" content="Toutes tes marques de vêtements préférées au même endroit.">
+  <meta name="theme-color" content="#f6f3ee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="StayPlug">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="icons/favicon-96.png" sizes="96x96" type="image/png">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="top">
+    <div class="top-row">
+      <h1 class="logo"><img src="logo.png" alt="StayPlug" width="720" height="214"></h1>
+      <div class="top-right">
+        <span class="updated" id="updated"></span>
+        <button class="me" id="me" aria-label="Changer de profil"></button>
+      </div>
+    </div>
+    <label class="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Rechercher un article, une marque…" autocomplete="off" enterkeyhint="search">
+      <button class="clear" id="clearQ" aria-label="Effacer la recherche" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </label>
+    <nav class="chips" id="chips" aria-label="Catégories"></nav>
+    <nav class="chips sub" id="subchips" aria-label="Sous-catégories" hidden></nav>
+  </header>
+
+  <div class="demo" id="demo" hidden>Données de démonstration, en attendant ton export Instagram.</div>
+
+  <main id="main">
+    <section id="view-articles" class="view">
+      <div class="toolbar">
+        <span class="count" id="count"></span>
+        <button class="filter-btn" id="openFilters">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>
+          Filtres<span class="badge" id="filterBadge" hidden></span>
+        </button>
+      </div>
+      <div class="active-filters" id="activeFilters"></div>
+      <div class="grid" id="grid"></div>
+      <div class="sentinel" id="sentinel"></div>
+      <div class="empty" id="empty" hidden>
+        <p>Aucun article ne correspond.</p>
+        <button class="link" id="resetAll">Tout réinitialiser</button>
+      </div>
+    </section>
+
+    <section id="view-marques" class="view" hidden>
+      <div class="toolbar"><span class="count" id="brandCount"></span></div>
+      <div class="brand-grid" id="brandGrid"></div>
+    </section>
+
+    <section id="view-favoris" class="view" hidden>
+      <div class="fav-head">
+        <span class="avatar" id="favAvatar"></span>
+        <div><h2 id="favTitle"></h2><button class="link" id="switchProfile">Changer de profil</button></div>
+      </div>
+      <h2 class="section-title">Marques favorites</h2>
+      <div class="brand-grid" id="favBrands"></div>
+      <h2 class="section-title">Articles favoris</h2>
+      <div class="grid" id="favGrid"></div>
+      <div class="empty" id="favEmpty" hidden>
+        <p>Touche le cœur sur un article ou une marque pour le retrouver ici.</p>
+      </div>
+    </section>
+  </main>
+
+  <nav class="tabbar" aria-label="Navigation">
+    <button data-view="marques" class="active">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/></svg>
+      <span>Marques</span>
+    </button>
+    <button data-view="articles">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 4 6.5 5.5 11 8 10v10h8V10l2.5 1L20 6.5 15 4c-.5 1.5-1.6 2.5-3 2.5S9.5 5.5 9 4z"/></svg>
+      <span>Articles</span>
+    </button>
+    <button data-view="favoris">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+      <span>Favoris</span>
+    </button>
+  </nav>
+
+  <div class="sheet-backdrop" id="backdrop" hidden></div>
+  <aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" hidden>
+    <div class="sheet-handle"></div>
+    <div class="sheet-head">
+      <h2 id="sheetTitle">Filtres</h2>
+      <button class="icon-btn" id="closeFilters" aria-label="Fermer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="sheet-body">
+      <h3>Trier par</h3>
+      <div class="pills" id="sortPills">
+        <button data-sort="new">Nouveautés</button>
+        <button data-sort="price-asc">Prix croissant</button>
+        <button data-sort="price-desc">Prix décroissant</button>
+      </div>
+
+      <h3>Prix</h3>
+      <div class="price-row">
+        <label><span>Min</span><input id="pmin" type="number" inputmode="numeric" min="0" placeholder="0"> €</label>
+        <label><span>Max</span><input id="pmax" type="number" inputmode="numeric" min="0" placeholder="∞"> €</label>
+      </div>
+
+      <label class="switch">
+        <span>En promotion uniquement</span>
+        <input type="checkbox" id="sale"><i></i>
+      </label>
+
+      <h3>Marques</h3>
+      <div class="brand-checks" id="brandChecks"></div>
+    </div>
+    <div class="sheet-foot">
+      <button class="btn ghost" id="resetFilters">Réinitialiser</button>
+      <button class="btn" id="applyFilters">Voir les articles</button>
+    </div>
+  </aside>
+
+  <div class="profiles" id="profiles" role="dialog" aria-modal="true" aria-labelledby="profilesTitle" hidden>
+    <button class="icon-btn profiles-close" id="closeProfiles" aria-label="Fermer" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <img class="profiles-logo" src="logo.png" alt="StayPlug" width="720" height="214">
+    <h2 id="profilesTitle">Qui es-tu ?</h2>
+    <div class="profile-grid" id="profileGrid"></div>
+  </div>
+
+  <div class="install" id="install" hidden>
+    <p>Installe StayPlug : touche <b>Partager</b> <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M8 7l4-4 4 4M6 11v9h12v-9"/></svg> puis <b>Sur l'écran d'accueil</b>.</p>
+    <button class="icon-btn" id="closeInstall" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
