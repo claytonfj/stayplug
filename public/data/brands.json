@@ -1365,7 +1365,7 @@
       "name": "Giuseppe Zanotti",
       "instagram": "giuseppezanotti",
       "site": "https://www.giuseppezanotti.com",
-      "logo": "logos/giuseppe-zanotti.png",
+      "logo": "https://www.giuseppezanotti.com/cdn/shop/t/2/assets/favicon.svg?v=9901899053982579781786443360",
       "currency": "EUR",
       "shopify": true
     },
@@ -1392,112 +1392,112 @@
       "name": "Esabora",
       "instagram": "esaborabrand",
       "site": null,
-      "logo": "logos/esabora.png"
+      "logo": null
     },
     {
       "id": "lockd-performance",
       "name": "Lockd Performance",
       "instagram": "lockd_clothing",
       "site": null,
-      "logo": "logos/lockd-performance.png"
+      "logo": null
     },
     {
       "id": "kixkz",
       "name": "Kixkz",
       "instagram": "kixkzclothing",
       "site": null,
-      "logo": "logos/kixkz.png"
+      "logo": null
     },
     {
       "id": "cold-culture",
       "name": "Cold Culture",
       "instagram": "coldculture",
       "site": null,
-      "logo": "logos/cold-culture.png"
+      "logo": null
     },
     {
       "id": "pistol",
       "name": "Pistol",
       "instagram": "pistol.ac",
       "site": null,
-      "logo": "logos/pistol.png"
+      "logo": null
     },
     {
       "id": "nube",
       "name": "Nube",
       "instagram": "nubebrand",
       "site": null,
-      "logo": "logos/nube.png"
+      "logo": null
     },
     {
       "id": "dimoir",
       "name": "Dimoir",
       "instagram": "dimoir.ww",
       "site": null,
-      "logo": "logos/dimoir.png"
+      "logo": null
     },
     {
       "id": "thirty",
       "name": "Thirty",
       "instagram": "thirty.studios",
       "site": null,
-      "logo": "logos/thirty.png"
+      "logo": null
     },
     {
       "id": "together",
       "name": "Together",
       "instagram": "branditogether",
       "site": null,
-      "logo": "logos/together.png"
+      "logo": null
     },
     {
       "id": "xym",
       "name": "Xym",
       "instagram": "xym.clo",
       "site": null,
-      "logo": "logos/xym.png"
+      "logo": null
     },
     {
       "id": "ouch-lethargic",
       "name": "Ouch Léthargic",
       "instagram": "ouch.lethargic",
       "site": null,
-      "logo": "logos/ouch-lethargic.png"
+      "logo": null
     },
     {
       "id": "lumoncore",
       "name": "Lumoncore",
       "instagram": "lumoncore",
       "site": null,
-      "logo": "logos/lumoncore.png"
+      "logo": null
     },
     {
       "id": "bastard-storage",
       "name": "Bastard Storage",
       "instagram": "bastardstorage.studios",
       "site": null,
-      "logo": "logos/bastard-storage.png"
+      "logo": null
     },
     {
       "id": "artifice",
       "name": "Artifice",
       "instagram": "artifice.original",
       "site": null,
-      "logo": "logos/artifice.png"
+      "logo": null
     },
     {
       "id": "dog-years",
       "name": "Dog Years",
       "instagram": "dogyearsskateclub",
       "site": null,
-      "logo": "logos/dog-years.png"
+      "logo": null
     },
     {
       "id": "saturn-citizen",
       "name": "Saturn Citizen",
       "instagram": "saturnciti",
       "site": null,
-      "logo": "logos/saturn-citizen.png"
+      "logo": null
     },
     {
       "id": "revengex",
@@ -1531,49 +1531,49 @@
       "name": "3izness",
       "instagram": "3izness",
       "site": null,
-      "logo": "logos/3izness.png"
+      "logo": null
     },
     {
       "id": "tcwp",
       "name": "TCWP",
       "instagram": "theculturewepractice",
       "site": null,
-      "logo": "logos/tcwp.png"
+      "logo": null
     },
     {
       "id": "nostructure",
       "name": "NoStructure",
       "instagram": "lahaykal",
       "site": null,
-      "logo": "logos/nostructure.png"
+      "logo": null
     },
     {
       "id": "kashmire",
       "name": "Kashmire",
       "instagram": "kashmire2889561843569591987",
       "site": null,
-      "logo": "logos/kashmire.png"
+      "logo": null
     },
     {
       "id": "cabnetwork",
       "name": "CABNetwork",
       "instagram": "cab.network",
       "site": null,
-      "logo": "logos/cabnetwork.png"
+      "logo": null
     },
     {
       "id": "amg-system",
       "name": "AMG System",
       "instagram": "amgsystem_",
       "site": null,
-      "logo": "logos/amg-system.png"
+      "logo": null
     },
     {
       "id": "finesse",
       "name": "Finesse",
       "instagram": "finesse.eu",
       "site": null,
-      "logo": "logos/finesse.png"
+      "logo": null
     },
     {
       "id": "phtmne",
@@ -1589,7 +1589,7 @@
       "name": "Noiserow",
       "instagram": "noiserow_",
       "site": null,
-      "logo": "logos/noiserow.png"
+      "logo": null
     },
     {
       "id": "azur",
@@ -1604,21 +1604,21 @@
       "name": "Flaire",
       "instagram": "flaire.us",
       "site": null,
-      "logo": "logos/flaire.png"
+      "logo": null
     },
     {
       "id": "idle-time",
       "name": "Idle Time",
       "instagram": "idle____time",
       "site": null,
-      "logo": "logos/idle-time.png"
+      "logo": null
     },
     {
       "id": "armc",
       "name": "ARMC",
       "instagram": "armc3.18",
       "site": null,
-      "logo": "logos/armc.png"
+      "logo": null
     },
     {
       "id": "army-noisy",
@@ -1634,35 +1634,35 @@
       "name": "A$$EZ",
       "instagram": "assez_",
       "site": null,
-      "logo": "logos/a-ez.png"
+      "logo": null
     },
     {
       "id": "studio-polyvalent",
       "name": "Studio Polyvalent",
       "instagram": "studiopolyvalent",
       "site": null,
-      "logo": "logos/studio-polyvalent.png"
+      "logo": null
     },
     {
       "id": "storey",
       "name": "Storey",
       "instagram": "6storey",
       "site": null,
-      "logo": "logos/storey.png"
+      "logo": null
     },
     {
       "id": "onyx",
       "name": "Onyx",
       "instagram": "onyx.sw",
       "site": null,
-      "logo": "logos/onyx.png"
+      "logo": null
     },
     {
       "id": "ascenz",
       "name": "Ascenz",
       "instagram": "ascenz.eu",
       "site": "https://ascenz.eu",
-      "logo": "logos/ascenz.png"
+      "logo": null
     },
     {
       "id": "parkey-wid",
@@ -1687,21 +1687,21 @@
       "name": "Shawnny",
       "instagram": "shawnny.mtl",
       "site": null,
-      "logo": "logos/shawnny.png"
+      "logo": null
     },
     {
       "id": "up-in-flames",
       "name": "Up In Flames",
       "instagram": "upinflames",
       "site": null,
-      "logo": "logos/up-in-flames.png"
+      "logo": null
     },
     {
       "id": "tern",
       "name": "Tern",
       "instagram": "tern",
       "site": null,
-      "logo": "logos/tern.png"
+      "logo": null
     },
     {
       "id": "see",
@@ -1717,7 +1717,7 @@
       "name": "Atem",
       "instagram": "atem.lab",
       "site": null,
-      "logo": "logos/atem.png"
+      "logo": null
     },
     {
       "id": "phantom",
@@ -1742,14 +1742,14 @@
       "name": "Elstar",
       "instagram": "elstar.hamburg",
       "site": null,
-      "logo": "logos/elstar.png"
+      "logo": null
     },
     {
       "id": "aastu",
       "name": "Aastu",
       "instagram": "aastu.vn",
       "site": "https://aastu.vn",
-      "logo": "logos/aastu.png"
+      "logo": null
     },
     {
       "id": "rvnt-archive",
@@ -1765,14 +1765,14 @@
       "name": "Saffath",
       "instagram": "saffath_id",
       "site": null,
-      "logo": "logos/saffath.png"
+      "logo": null
     },
     {
       "id": "trippie-p",
       "name": "Trippie P",
       "instagram": "trippiep.wip",
       "site": null,
-      "logo": "logos/trippie-p.png"
+      "logo": null
     },
     {
       "id": "alure-hope",
@@ -1788,7 +1788,7 @@
       "name": "Omirad",
       "instagram": "omiradofficial",
       "site": null,
-      "logo": "logos/omirad.png"
+      "logo": null
     },
     {
       "id": "ultralight-london",
@@ -1804,14 +1804,14 @@
       "name": "Lonely Wolf",
       "instagram": "byalonewolf_",
       "site": null,
-      "logo": "logos/lonely-wolf.png"
+      "logo": null
     },
     {
       "id": "brique",
       "name": "Brique",
       "instagram": "13rique",
       "site": null,
-      "logo": "logos/brique.png"
+      "logo": null
     },
     {
       "id": "fuck-this-industry",
@@ -1836,21 +1836,21 @@
       "name": "Pain Only Makes You Stronger",
       "instagram": "trippiepclothing",
       "site": null,
-      "logo": "logos/pain-only-makes-you-stronger.png"
+      "logo": null
     },
     {
       "id": "ambiguite",
       "name": "Ambiguïté",
       "instagram": "ambiguite__",
       "site": null,
-      "logo": "logos/ambiguite.png"
+      "logo": null
     },
     {
       "id": "peak-television",
       "name": "Peak Television",
       "instagram": "peaktelevision",
       "site": null,
-      "logo": "logos/peak-television.png"
+      "logo": null
     },
     {
       "id": "sheff",
@@ -1875,7 +1875,7 @@
       "name": "WeMissU",
       "instagram": "wemissuwmu",
       "site": null,
-      "logo": "logos/wemissu.png"
+      "logo": null
     },
     {
       "id": "demik",
@@ -1891,14 +1891,14 @@
       "name": "Redrum",
       "instagram": "redrum.usa",
       "site": null,
-      "logo": "logos/redrum.png"
+      "logo": null
     },
     {
       "id": "dutreuil",
       "name": "Dutreuil",
       "instagram": "dutreuil__",
       "site": null,
-      "logo": "logos/dutreuil.png"
+      "logo": null
     },
     {
       "id": "yg-studios",

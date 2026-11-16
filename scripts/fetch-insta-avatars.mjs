@@ -3,7 +3,11 @@
 //
 // Usage : node scripts/fetch-insta-avatars.mjs [--brand=id] [--missing] [--delay=2500]
 //   --missing : seulement les marques sans logo local
+//   --only    : liste d'ids séparés par des virgules
 //   --delay   : pause entre deux comptes (ms), pour ne pas se faire bloquer
+//
+// Si Instagram limite (logo générique 3 fois de suite), le script s'arrête :
+// relance plus tard avec --missing ou --only.
 
 import { readFile, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
@@ -17,6 +21,7 @@ const USER_AGENT = 'Mozilla/5.0 (compatible; StayPlugBot/1.0; agregateur personn
 
 const args = Object.fromEntries(process.argv.slice(2).map((a) => { const [k, v = true] = a.replace(/^--/, '').split('='); return [k, v]; }));
 const delay = Number(args.delay) || 2500;
+const only = args.only ? String(args.only).split(',') : null;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function avatarUrl(handle) {
@@ -29,26 +34,33 @@ async function avatarUrl(handle) {
   const html = await res.text();
   const m = html.match(/<meta property="og:image" content="([^"]+)"/);
   if (!m) throw new Error('pas de photo (compte introuvable ou page de connexion)');
-  return m[1].replace(/&amp;/g, '&');
+  const url = m[1].replace(/&amp;/g, '&');
+  // Les vraies photos de profil sont sous /t51.xxxx-19/. Sinon Instagram renvoie
+  // son logo générique : c'est qu'il limite les requêtes.
+  if (!/\/t51\.[\d]+-19\//.test(url)) throw Object.assign(new Error('logo Instagram générique (limite)'), { limited: true });
+  return url;
 }
 
 const file = JSON.parse(await readFile(new URL('brands.json', DATA), 'utf8'));
 const targets = file.brands.filter((b) =>
-  b.instagram && (!args.brand || b.id === args.brand) &&
+  b.instagram && (!args.brand || b.id === args.brand) && (!only || only.includes(b.id)) &&
   (!args.missing || !b.logo || /^https?:/.test(b.logo) || !existsSync(join(LOGOS, `${b.id}.png`))));
 
 let ok = 0;
+let limited = 0;
 const failed = [];
 for (const [i, brand] of targets.entries()) {
   process.stdout.write(`[${i + 1}/${targets.length}] ${brand.name} (@${brand.instagram}) … `);
   try {
     brand.logo = await saveImage(await avatarUrl(brand.instagram), brand.id);
     ok++;
+    limited = 0;
     console.log('ok');
   } catch (e) {
     console.log(e.message);
     failed.push(brand.id);
-    if (e.stop) break;
+    if (e.limited) limited++;
+    if (e.stop || limited >= 3) { console.log('Instagram limite les requêtes : arrêt. Relance plus tard.'); break; }
   }
   // Sauvegarde au fil de l'eau : une interruption ne perd rien.
   await writeFile(new URL('brands.json', DATA), JSON.stringify(file, null, 2));
