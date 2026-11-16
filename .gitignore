@@ -1,4 +1,4 @@
 node_modules/
 .DS_Store
 # Liste privée de tes abonnements Instagram
-data/
+/data/

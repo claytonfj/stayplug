@@ -1,0 +1,1928 @@
+{
+  "brands": [
+    {
+      "id": "jacker",
+      "name": "Jacker",
+      "instagram": "jacker",
+      "site": "https://www.jacker.fr",
+      "logo": "logos/jacker.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "wasted-paris",
+      "name": "Wasted Paris",
+      "instagram": "wastedparis",
+      "site": "https://wasted.fr",
+      "logo": "logos/wasted-paris.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "lostboys",
+      "name": "Lostboys",
+      "instagram": "lostboys.archives",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "lukamachain",
+      "name": "Lukamachain",
+      "instagram": "lukamachain",
+      "site": "https://www.lukamachain.com",
+      "logo": "logos/lukamachain.png",
+      "shopify": true,
+      "currency": "EUR",
+      "exclude": [
+        "Free belt"
+      ]
+    },
+    {
+      "id": "trapstar",
+      "name": "Trapstar",
+      "instagram": "trapstarlondon",
+      "site": "https://uk.trapstarlondon.com",
+      "logo": "logos/trapstar.png",
+      "shopify": true,
+      "currency": "GBP"
+    },
+    {
+      "id": "arte",
+      "name": "Arte",
+      "instagram": "arteantwerp",
+      "site": "https://arte-antwerp.com",
+      "logo": "logos/arte.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "vicinity",
+      "name": "Vicinity",
+      "instagram": "vicinity_de",
+      "site": "https://www.vicinityclo.de",
+      "logo": "logos/vicinity.png",
+      "currency": "EUR"
+    },
+    {
+      "id": "daily-paper",
+      "name": "Daily Paper",
+      "instagram": "dailypaper",
+      "site": "https://dailypaperclothing.com",
+      "logo": "https://dailypaperclothing.com/cdn/shop/files/favicon.png?crop=center&height=32&v=1665650486&width=32",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "supraw",
+      "name": "Supraw",
+      "instagram": "supraaaw",
+      "site": "https://supraw.com",
+      "logo": "logos/supraw.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "la-fam",
+      "name": "La Fam",
+      "instagram": "lafamamsterdam",
+      "site": "https://www.lafamamsterdam.com",
+      "logo": "logos/la-fam.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "excentred",
+      "name": "Excentred",
+      "instagram": "excentred",
+      "site": "https://excentred.com",
+      "logo": "logos/excentred.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "hoodbaby",
+      "name": "Hoodbaby",
+      "instagram": "hoodbaby.fr",
+      "site": "https://hoodbaby.fr",
+      "logo": "logos/hoodbaby.png",
+      "currency": "EUR"
+    },
+    {
+      "id": "tell-them-why-not",
+      "name": "Tell Them Why Not",
+      "instagram": "tellthem_whynot",
+      "site": "https://tellthemwhynot.com",
+      "logo": "logos/tell-them-why-not.png",
+      "top": true,
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "side-arts",
+      "name": "Side Arts",
+      "instagram": "sidearts_",
+      "site": "https://sidearts.fr",
+      "logo": "logos/side-arts.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "bunnit",
+      "name": "Bunnit",
+      "instagram": null,
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "came-up-in-the-drought",
+      "name": "Came Up In The Drought",
+      "instagram": "cameupinthedrought",
+      "site": "https://www.cameupinthedrought.com",
+      "logo": "logos/came-up-in-the-drought.png"
+    },
+    {
+      "id": "glo-gang",
+      "name": "Glo Gang",
+      "instagram": "glogang",
+      "site": "https://glogangworldwide.com",
+      "logo": "logos/glo-gang.png",
+      "shopify": true,
+      "currency": "USD",
+      "exclude": [
+        "plush"
+      ]
+    },
+    {
+      "id": "weyz",
+      "name": "Weyz",
+      "instagram": "weyzclothing",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "no-clout",
+      "name": "No Clout",
+      "instagram": "noclout.fr",
+      "site": "https://noclout.fr",
+      "logo": "logos/no-clout.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "bbc-icecream",
+      "name": "BBC Icecream",
+      "instagram": "bbcicecream",
+      "site": "https://www.bbcicecream.com",
+      "logo": "logos/bbc-icecream.png",
+      "shopify": true,
+      "currency": "USD"
+    },
+    {
+      "id": "ppsc",
+      "name": "PPSC",
+      "instagram": "pleasepaulostopcappin",
+      "site": "https://pleasepaulostopcappin.com",
+      "logo": "logos/ppsc.png",
+      "shopify": true,
+      "currency": "USD"
+    },
+    {
+      "id": "divin-by-divin",
+      "name": "Divin by Divin",
+      "instagram": "divinbydivin",
+      "site": "https://divinbydivin.com",
+      "logo": "logos/divin-by-divin.png",
+      "top": true,
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "boohooman",
+      "name": "BoohooMan",
+      "instagram": "boohoomanofficial",
+      "site": "https://www.boohooman.com",
+      "logo": "logos/boohooman.png"
+    },
+    {
+      "id": "strides",
+      "name": "Strides",
+      "instagram": "strides.jp",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "dissconduct",
+      "name": "Dissconduct",
+      "instagram": "dissconduct",
+      "site": "https://dissconduct.com",
+      "logo": "logos/dissconduct.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "amoses",
+      "name": "Amoses",
+      "instagram": "amosesclothing",
+      "site": "https://amosesclothing.com",
+      "logo": "logos/amoses.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "supram",
+      "name": "Supram",
+      "instagram": "supram",
+      "site": "https://supram.shop",
+      "logo": "logos/supram.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "lucid-club",
+      "name": "Lucid Club",
+      "instagram": "lucidclub",
+      "site": "https://lucid-club.com",
+      "logo": "logos/lucid-club.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "torvic",
+      "name": "Torvic",
+      "instagram": "torvic404",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "scientist-lab",
+      "name": "Scientist Lab",
+      "instagram": "scientist__lab",
+      "site": "https://scientistlab.store",
+      "logo": "logos/scientist-lab.png",
+      "top": true,
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "purple-place",
+      "name": "Purple Place",
+      "instagram": "purpleplaceclothing",
+      "site": "https://purpleplaceclothing.com",
+      "logo": "logos/purple-place.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "ftp",
+      "name": "FTP",
+      "instagram": "ftp",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "aion",
+      "name": "Aion",
+      "instagram": "aion.era",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "808-vision",
+      "name": "808 Vision",
+      "instagram": "808.vision",
+      "site": "https://808.vision",
+      "logo": "logos/808-vision.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "clints",
+      "name": "Clints",
+      "instagram": "clintsinc",
+      "site": "https://clints.co",
+      "logo": null,
+      "shopify": true,
+      "currency": "GBP"
+    },
+    {
+      "id": "entropy",
+      "name": "Entropy",
+      "instagram": "entropy.fr",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "taliri",
+      "name": "Taliri",
+      "instagram": "taliriii",
+      "site": "https://taliri.fr",
+      "logo": "logos/taliri.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "hidden-faces",
+      "name": "Hidden Faces",
+      "instagram": "hidden______faces",
+      "site": "https://hiddenfaces.store",
+      "logo": "logos/hidden-faces.png",
+      "shopify": true,
+      "currency": "USD"
+    },
+    {
+      "id": "walk-in-paris",
+      "name": "Walk in Paris",
+      "instagram": "walkinparis",
+      "site": "https://walkinparis.com",
+      "logo": "logos/walk-in-paris.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "risktaker",
+      "name": "Risktaker",
+      "instagram": "risktaker.gang",
+      "site": null,
+      "logo": null,
+      "top": true
+    },
+    {
+      "id": "human-with-attitude",
+      "name": "Human With Attitude",
+      "instagram": "humanwithattitude",
+      "site": "https://humanwithattitude.com",
+      "logo": "logos/human-with-attitude.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "auguztusa",
+      "name": "Auguztusa",
+      "instagram": "auguztusa",
+      "site": "https://auguztusa.com",
+      "logo": "logos/auguztusa.png",
+      "shopify": true,
+      "currency": "USD"
+    },
+    {
+      "id": "corvidae",
+      "name": "Corvidae",
+      "instagram": "crvdae",
+      "site": "https://crvdae.com",
+      "logo": "logos/corvidae.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "unknown-london",
+      "name": "Unknown London",
+      "instagram": "unknownuk",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "butter-goods",
+      "name": "Butter Goods",
+      "instagram": "buttergoods",
+      "site": "https://eu.buttergoods.com",
+      "logo": "logos/butter-goods.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "davril-supply",
+      "name": "Davril Supply",
+      "instagram": "davril.co",
+      "site": "https://davril.com",
+      "logo": "logos/davril-supply.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "named-collective",
+      "name": "Named Collective",
+      "instagram": "namedcollective",
+      "site": "https://namedcollective.com",
+      "logo": "logos/named-collective.png",
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "favela",
+      "name": "Favela",
+      "instagram": "favelaclothing",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "revenge",
+      "name": "Revenge",
+      "instagram": "revenge",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "bape",
+      "name": "Bape",
+      "instagram": "bape_europe",
+      "site": "https://eu.bape.com",
+      "logo": "logos/bape.png",
+      "top": true,
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "stussy",
+      "name": "Stüssy",
+      "instagram": "stussy",
+      "site": "https://eu.stussy.com",
+      "logo": null,
+      "shopify": true,
+      "currency": "EUR"
+    },
+    {
+      "id": "corteiz",
+      "name": "Corteiz",
+      "instagram": "corteiz",
+      "site": "https://www.corteiz.com",
+      "logo": "logos/corteiz.png",
+      "currency": "EUR"
+    },
+    {
+      "id": "supreme",
+      "name": "Supreme",
+      "instagram": "supremenewyork",
+      "site": "https://supreme.com",
+      "logo": "logos/supreme.png"
+    },
+    {
+      "id": "l-humaine",
+      "name": "L'Humaine",
+      "instagram": "lhumaine.fc",
+      "site": "https://lhumaine.com",
+      "logo": "logos/l-humaine.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "maison52",
+      "name": "Maison52",
+      "instagram": "maison52_",
+      "site": "https://maison52.com",
+      "logo": "logos/maison52.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "snores",
+      "name": "Snöres",
+      "instagram": "snoresco",
+      "site": "https://snoresco.com",
+      "logo": "logos/snores.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "arkuve",
+      "name": "Arkuve",
+      "instagram": "arkuve.fr",
+      "site": "https://arkuve.com",
+      "logo": "logos/arkuve.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "vivace-studio",
+      "name": "Vivace Studio",
+      "instagram": "vivacestudio_",
+      "site": "https://vivacestudio.fr",
+      "logo": null,
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "henny",
+      "name": "Henny",
+      "instagram": "henny.xyz",
+      "site": "https://henny.xyz",
+      "logo": null,
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "n0tsame",
+      "name": "N0tsame",
+      "instagram": "notsame777",
+      "site": "https://notsame.shop",
+      "logo": "logos/n0tsame.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "intheiris",
+      "name": "InTheIris",
+      "instagram": "inthe1ris",
+      "site": "https://intheiris.com",
+      "logo": "https://intheiris.com/cdn/shop/files/1t1LOGO_e9eadaa6-8942-4164-9478-42a45dcfc571_32x32.png?v=1739296347",
+      "currency": "EUR"
+    },
+    {
+      "id": "romance-is-dead",
+      "name": "Romance Is Dead",
+      "instagram": "romanceisdead.us",
+      "site": "https://www.romanceisdead.store",
+      "logo": "logos/romance-is-dead.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "sonderzeichen",
+      "name": "Sonderzeichen",
+      "instagram": "sonderzeichen.eu",
+      "site": "https://sonderzeichen.eu",
+      "logo": "logos/sonderzeichen.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "skycall",
+      "name": "Skycall",
+      "instagram": "skycall.clothes",
+      "site": "https://skycallclothes.com",
+      "logo": null,
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "92track",
+      "name": "92Track",
+      "instagram": "92track",
+      "site": "https://92track.fr",
+      "logo": null,
+      "currency": "EUR"
+    },
+    {
+      "id": "drankstar",
+      "name": "Drankstar",
+      "instagram": "drankstar777",
+      "site": "https://drankstar.com",
+      "logo": "logos/drankstar.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "vszn",
+      "name": "VSZN",
+      "instagram": "vszn.cl",
+      "site": "https://vsznclothing.com",
+      "logo": "logos/vszn.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "worldquest",
+      "name": "Worldquest",
+      "instagram": "worldquest_",
+      "site": "https://worldquest.fr",
+      "logo": "logos/worldquest.png",
+      "currency": "EUR"
+    },
+    {
+      "id": "punkandyo",
+      "name": "Punkandyo",
+      "instagram": "punkandyo",
+      "site": "https://punkandyo.com",
+      "logo": "logos/punkandyo.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "noissey",
+      "name": "Noissey",
+      "instagram": "noissey_official",
+      "site": "https://noissey.com",
+      "logo": "logos/noissey.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "protect-ldn",
+      "name": "Protect LDN",
+      "instagram": "protect.ldn",
+      "site": "https://protectldn.com",
+      "logo": "logos/protect-ldn.png",
+      "currency": "GBP",
+      "shopify": true
+    },
+    {
+      "id": "new-east-order",
+      "name": "New East Order",
+      "instagram": "neo_neweastorder",
+      "site": "https://neweastorder.com",
+      "logo": "logos/new-east-order.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "pepe-studio",
+      "name": "Pepe Studio",
+      "instagram": "pepe_studio_",
+      "site": "https://pepestudio.store",
+      "logo": "logos/pepe-studio.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "worst-work",
+      "name": "Worst Work",
+      "instagram": "worstworkk",
+      "site": "https://worstwork.com",
+      "logo": "logos/worst-work.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "lowdump",
+      "name": "Lowdump",
+      "instagram": "llowdump",
+      "site": "https://lowdump.fr",
+      "logo": "logos/lowdump.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "kobz",
+      "name": "Kobz",
+      "instagram": "kobz_brand",
+      "site": "https://kobzbrand.com",
+      "logo": "logos/kobz.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "big4big",
+      "name": "Big4Big",
+      "instagram": "big4big.lwbf",
+      "site": "https://big4big.fr",
+      "logo": "logos/big4big.png",
+      "currency": "EUR"
+    },
+    {
+      "id": "ironie-de-l-amour",
+      "name": "Ironie de l'Amour",
+      "instagram": "ironiedelamour",
+      "site": "https://www.ironiedelamour.com",
+      "logo": "logos/ironie-de-l-amour.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "parur",
+      "name": "Parur",
+      "instagram": "parur.fr",
+      "site": "https://parur.store",
+      "logo": "logos/parur.png"
+    },
+    {
+      "id": "haunted-starbucks",
+      "name": "Haunted Starbucks",
+      "instagram": "hauntedstarbucks",
+      "site": "https://www.hauntedstarbucks.com",
+      "logo": "logos/haunted-starbucks.png",
+      "currency": "USD",
+      "shopify": true
+    },
+    {
+      "id": "tweny8",
+      "name": "Tweny8",
+      "instagram": "tweny8brand",
+      "site": "https://tweny8.fr",
+      "logo": null,
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "burglary",
+      "name": "Burglary",
+      "instagram": "burglaryhills",
+      "site": "https://burglaryhills.com",
+      "logo": "logos/burglary.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "torom",
+      "name": "Torom",
+      "instagram": "toromparis",
+      "site": "https://toromparis.co",
+      "logo": null,
+      "currency": "GBP",
+      "shopify": true
+    },
+    {
+      "id": "bonny",
+      "name": "Bonny",
+      "instagram": "bonny.online",
+      "site": "https://bonnyonline.com",
+      "logo": "logos/bonny.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "neptunz",
+      "name": "Neptunz",
+      "instagram": "nptz.clo",
+      "site": "https://neptunz.shop",
+      "logo": "logos/neptunz.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "eternite",
+      "name": "Éternité",
+      "instagram": "eternitebrand",
+      "site": "https://eternitebrand.com",
+      "logo": "logos/eternite.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "affiliated",
+      "name": "Affiliated",
+      "instagram": "affiliated.clo",
+      "site": "https://affiliated.co",
+      "logo": "logos/affiliated.png",
+      "currency": "EUR"
+    },
+    {
+      "id": "fendskii",
+      "name": "Fendskii",
+      "instagram": "fendskii",
+      "site": "https://fendskii.com",
+      "logo": "logos/fendskii.png",
+      "currency": "EUR"
+    },
+    {
+      "id": "chrome-crosses",
+      "name": "Chrome Crosses",
+      "instagram": "chromecrosses_",
+      "site": "https://chromecrossess.com",
+      "logo": "logos/chrome-crosses.png",
+      "currency": "EUR"
+    },
+    {
+      "id": "verborgen",
+      "name": "Verborgen",
+      "instagram": "verborgenstudios",
+      "site": "https://verborgenstudios.com",
+      "logo": "logos/verborgen.png",
+      "currency": "GBP"
+    },
+    {
+      "id": "minus-two",
+      "name": "Minus Two",
+      "instagram": "minustwoglobal",
+      "site": "https://www.minustwo.global",
+      "logo": "logos/minus-two.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "yugen-paris",
+      "name": "Yugen Paris",
+      "instagram": "yugenparis",
+      "site": "https://www.yugenparis.com",
+      "logo": "logos/yugen-paris.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "culturevoid",
+      "name": "CultureVoid",
+      "instagram": "culturevoid.png",
+      "site": "https://culturevoid.com",
+      "logo": "logos/culturevoid.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "ida-supply",
+      "name": "IDA Supply",
+      "instagram": "ida.sply",
+      "site": "https://idasupply.com",
+      "logo": "https://idasupply.com/wp-content/uploads/2025/06/Official-IDA-Supply-Logo-IDA-300x300.webp"
+    },
+    {
+      "id": "live-in-large",
+      "name": "Live In Large",
+      "instagram": "liveinlarge_",
+      "site": "https://liveinlarge.be",
+      "logo": "logos/live-in-large.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "sixecks",
+      "name": "Sixecks",
+      "instagram": "sixecks",
+      "site": "https://sixecks.com",
+      "logo": "logos/sixecks.png",
+      "currency": "USD"
+    },
+    {
+      "id": "skyind",
+      "name": "Skyind",
+      "instagram": "skyind.eu",
+      "site": "https://skyind.eu",
+      "logo": "logos/skyind.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "grimy-kids",
+      "name": "Grimy Kids",
+      "instagram": "grimykids",
+      "site": "https://grimykids.com",
+      "logo": null,
+      "currency": "EUR"
+    },
+    {
+      "id": "feelalive",
+      "name": "Feelalive",
+      "instagram": "feelalive.us",
+      "site": "https://feelalive.us",
+      "logo": "logos/feelalive.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "atypique-sage",
+      "name": "Atypique Sage",
+      "instagram": "atypique.sage",
+      "site": "https://atypiquesage.com",
+      "logo": "logos/atypique-sage.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "always-do-what-you-should-do",
+      "name": "Always Do What You Should Do",
+      "instagram": "alwaysdowhatyoushoulddo",
+      "site": "https://alwaysdowhatyoushoulddo.com",
+      "logo": "logos/always-do-what-you-should-do.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "pour-les-gens",
+      "name": "Pour Les Gens",
+      "instagram": "pourlesgenss",
+      "site": "https://pourlesgens.xyz",
+      "logo": "logos/pour-les-gens.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "one-limit",
+      "name": "One Limit",
+      "instagram": "onelimit.fr",
+      "site": "https://www.onelimit.fr",
+      "logo": "logos/one-limit.png",
+      "currency": "EUR"
+    },
+    {
+      "id": "mertra",
+      "name": "Mertra",
+      "instagram": "mertra",
+      "site": "https://mertra.com",
+      "logo": "logos/mertra.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "renaissance",
+      "name": "Renaissance",
+      "instagram": "renaissancegarments",
+      "site": "https://www.renaissancegarments.com",
+      "logo": "logos/renaissance.png",
+      "currency": "EUR"
+    },
+    {
+      "id": "paradox",
+      "name": "Paradox",
+      "instagram": "prx.clo",
+      "site": "https://prxclo.shop",
+      "logo": null,
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "paradox-brussels",
+      "name": "Paradox Brussels",
+      "instagram": "paradox_brussels",
+      "site": "https://paradoxbrussels.com",
+      "logo": "logos/paradox-brussels.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "cynique",
+      "name": "Cynique",
+      "instagram": "cynique.archives",
+      "site": "https://www.cynique.co",
+      "logo": "logos/cynique.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "pierre-bassene-world",
+      "name": "Pierre Bassene World",
+      "instagram": "pierrebassene.world",
+      "site": "https://pierrebassene.world",
+      "logo": "logos/pierre-bassene-world.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "reborn-cap",
+      "name": "Reborn Cap",
+      "instagram": "reborn.cap",
+      "site": "https://reborncap.com",
+      "logo": "logos/reborn-cap.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "syna-world",
+      "name": "Syna World",
+      "instagram": "synaworld",
+      "site": "https://synaworld.co",
+      "logo": "logos/syna-world.png"
+    },
+    {
+      "id": "supervillain",
+      "name": "Supervillain",
+      "instagram": "supervillainwear",
+      "site": "https://www.supervillainwear.com",
+      "logo": null
+    },
+    {
+      "id": "ctzen",
+      "name": "Ctzen",
+      "instagram": "ctzen.xyz",
+      "site": "https://www.ctzen.xyz",
+      "logo": "logos/ctzen.png",
+      "currency": "EUR"
+    },
+    {
+      "id": "faith-by-luis",
+      "name": "Faith by Luis",
+      "instagram": "faithbyluis",
+      "site": "https://faithbyluis.com",
+      "logo": "logos/faith-by-luis.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "free-rein",
+      "name": "Free Rein",
+      "instagram": "freereinglobal",
+      "site": "https://freereinglobal.com",
+      "logo": "logos/free-rein.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "over5ize",
+      "name": "Over5ize",
+      "instagram": "over5ize.farm",
+      "site": "https://over5izefarm.com",
+      "logo": "logos/over5ize.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "hudson-s-gallery",
+      "name": "Hudson's Gallery",
+      "instagram": "hudsonsgallery",
+      "site": "https://hudsonsgallery.com",
+      "logo": "logos/hudson-s-gallery.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "distopion",
+      "name": "Distopion",
+      "instagram": "distopion",
+      "site": "https://distopion.com",
+      "logo": "logos/distopion.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "scares-studio",
+      "name": "Scares Studio",
+      "instagram": "scaresstudio",
+      "site": "https://scaresstudio.com",
+      "logo": null,
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "zaltria",
+      "name": "Zaltria",
+      "instagram": "zaltriaofficial",
+      "site": "https://zaltria.com",
+      "logo": null,
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "drmers-club",
+      "name": "Drmers Club",
+      "instagram": "drmersclub",
+      "site": "https://drmersclub.com",
+      "logo": "logos/drmers-club.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "thesupermade",
+      "name": "Thesupermade",
+      "instagram": "thesupermade",
+      "site": "https://www.thesupermade.com",
+      "logo": "logos/thesupermade.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "live-fast-die-young",
+      "name": "Live Fast Die Young",
+      "instagram": "livefastdieyoung",
+      "site": "https://livefastdieyoung.com",
+      "logo": "logos/live-fast-die-young.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "whats-gonna-happen",
+      "name": "Whats Gonna Happen",
+      "instagram": "whatsgonnahappen.de",
+      "site": "https://whatsgonnahappen.de",
+      "logo": "logos/whats-gonna-happen.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "l-univeuw",
+      "name": "L'Univeuw",
+      "instagram": "univeuw",
+      "site": "https://univeuw.com",
+      "logo": "logos/l-univeuw.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "skupp",
+      "name": "Skupp",
+      "instagram": "skupp.co",
+      "site": "https://skupp.eu",
+      "logo": "logos/skupp.png"
+    },
+    {
+      "id": "offonoff-club",
+      "name": "Offonoff Club",
+      "instagram": "offonoffclub",
+      "site": "https://www.offonoffclub.com",
+      "logo": null,
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "scuffers",
+      "name": "Scuffers",
+      "instagram": "scuffers.co",
+      "site": "https://scuffers.com",
+      "logo": "logos/scuffers.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "genese-vardah",
+      "name": "Genese Vardah",
+      "instagram": "genesevardah",
+      "site": "https://www.genesevardah.com",
+      "logo": "logos/genese-vardah.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "persona",
+      "name": "Persona",
+      "instagram": "personaclo",
+      "site": "https://personaclo.com",
+      "logo": "logos/persona.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "cold-sins",
+      "name": "Cold Sins",
+      "instagram": "coldsins.ny",
+      "site": "https://www.coldsins.com",
+      "logo": "logos/cold-sins.png",
+      "currency": "USD",
+      "shopify": true
+    },
+    {
+      "id": "fayme",
+      "name": "Fayme",
+      "instagram": "fayme.store",
+      "site": "https://www.fayme.store",
+      "logo": "logos/fayme.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "villain",
+      "name": "Villain",
+      "instagram": "villainworldd",
+      "site": "https://villainworld.com",
+      "logo": "logos/villain.png"
+    },
+    {
+      "id": "damage-industry",
+      "name": "Damage Industry",
+      "instagram": "dmgeindustry",
+      "site": "https://damageindustry.com",
+      "logo": "logos/damage-industry.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "dusk",
+      "name": "Dusk",
+      "instagram": "duskarchive",
+      "site": "https://duskarchive.com",
+      "logo": "logos/dusk.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "personsoul",
+      "name": "Personsoul",
+      "instagram": "_personsoul_",
+      "site": "https://www.personsoul.com",
+      "logo": "logos/personsoul.png",
+      "currency": "USD",
+      "shopify": true
+    },
+    {
+      "id": "cruehawts",
+      "name": "Cruehawts",
+      "instagram": "cruehawts",
+      "site": "https://cruehawts.com",
+      "logo": "logos/cruehawts.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "evisu",
+      "name": "Evisu",
+      "instagram": "evisu1991",
+      "site": "https://evisu.co.uk",
+      "logo": "https://evisu.co.uk/cdn/shop/files/favicon.jpg?crop=center&height=32&v=1725419138&width=32",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "heaven-can-wait",
+      "name": "Heaven Can Wait",
+      "instagram": "__heavencanwait__",
+      "site": "https://heavencanwait.store",
+      "logo": "logos/heaven-can-wait.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "sixshooter",
+      "name": "Sixshooter",
+      "instagram": "sixshooter.studio",
+      "site": "https://sixshooter.store",
+      "logo": "logos/sixshooter.png",
+      "currency": "EUR"
+    },
+    {
+      "id": "maison-de-cozy",
+      "name": "Maison de Cozy",
+      "instagram": "maisondecozy_",
+      "site": "https://maisondecozy.com",
+      "logo": "logos/maison-de-cozy.png",
+      "currency": "EUR",
+      "shopify": true,
+      "collection": "men",
+      "exclude": [
+        "G1RL"
+      ]
+    },
+    {
+      "id": "orem-studio",
+      "name": "Orem Studio",
+      "instagram": "oremstudio",
+      "site": "https://oremstudio.com",
+      "logo": "logos/orem-studio.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "allure-county",
+      "name": "Allure County",
+      "instagram": "allurecounty",
+      "site": "https://www.allurecounty.com",
+      "logo": "logos/allure-county.png",
+      "currency": "EUR"
+    },
+    {
+      "id": "life-of-errors",
+      "name": "Life of Errors",
+      "instagram": "lifeoferrors_",
+      "site": "https://lifeoferrors.com",
+      "logo": "logos/life-of-errors.png",
+      "currency": "USD",
+      "shopify": true
+    },
+    {
+      "id": "antidote-worldwide",
+      "name": "Antidote Worldwide",
+      "instagram": "antidoteworldwide_official",
+      "site": "https://antidoteworldwide.com",
+      "logo": "logos/antidote-worldwide.png",
+      "currency": "USD",
+      "shopify": true
+    },
+    {
+      "id": "arntreal",
+      "name": "Arntreal",
+      "instagram": "arntreal.co",
+      "site": "https://arntreal.com",
+      "logo": "logos/arntreal.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "reputation-studios",
+      "name": "Reputation Studios",
+      "instagram": "reputation_studios_",
+      "site": "https://www.reputation-studios.com",
+      "logo": "logos/reputation-studios.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "none-of-us",
+      "name": "None of Us",
+      "instagram": "noneofus",
+      "site": "https://www.noneofus.de",
+      "logo": "logos/none-of-us.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "lust-in-noir",
+      "name": "Lust in Noir",
+      "instagram": "lustinnoir",
+      "site": "https://lustinnoir.com",
+      "logo": "logos/lust-in-noir.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "flower-instincts",
+      "name": "Flower Instincts",
+      "instagram": "flowerinstincts",
+      "site": "https://www.flowerinstincts.com",
+      "logo": null,
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "private",
+      "name": "Private",
+      "instagram": "aprivateco",
+      "site": "https://aprivate.co",
+      "logo": "logos/private.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "purplegose",
+      "name": "Purplegose",
+      "instagram": "purplegose",
+      "site": "https://purplegose.com",
+      "logo": "logos/purplegose.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "jaded-london",
+      "name": "Jaded London",
+      "instagram": "jaded_man",
+      "site": "https://jadedldn.com",
+      "logo": null
+    },
+    {
+      "id": "palace",
+      "name": "Palace",
+      "instagram": "palaceskateboards",
+      "site": "https://palaceskateboards.com",
+      "logo": "logos/palace.png"
+    },
+    {
+      "id": "racer-worldwide",
+      "name": "Racer Worldwide",
+      "instagram": "racerworldwide",
+      "site": "https://www.racerworldwide.net",
+      "logo": "logos/racer-worldwide.png",
+      "currency": "EUR",
+      "shopify": true,
+      "exclude": [
+        "Juicy",
+        "Modular Tower"
+      ]
+    },
+    {
+      "id": "true-religion",
+      "name": "True Religion",
+      "instagram": "truereligion",
+      "site": "https://www.truereligion.com",
+      "logo": "https://www.truereligion.com/on/demandware.static/Sites-TrueReligion-Site/-/default/dwa4f2cc57/images/favicons/favicon.ico"
+    },
+    {
+      "id": "obey",
+      "name": "OBEY",
+      "instagram": "obeyclothing",
+      "site": "https://obeyclothing.com",
+      "logo": "logos/obey.png",
+      "currency": "USD",
+      "shopify": true
+    },
+    {
+      "id": "giuseppe-zanotti",
+      "name": "Giuseppe Zanotti",
+      "instagram": "giuseppezanotti",
+      "site": "https://www.giuseppezanotti.com",
+      "logo": "https://www.giuseppezanotti.com/cdn/shop/t/2/assets/favicon.svg?v=9901899053982579781786443360",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "brakka",
+      "name": "Brakka",
+      "instagram": "brakkaonline",
+      "site": "https://brakka.store",
+      "logo": "logos/brakka.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "kitowares",
+      "name": "Kitowares",
+      "instagram": "kitowares",
+      "site": "https://www.kitowares.online",
+      "logo": "logos/kitowares.png",
+      "currency": "USD",
+      "shopify": true
+    },
+    {
+      "id": "esabora",
+      "name": "Esabora",
+      "instagram": "esaborabrand",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "lockd-performance",
+      "name": "Lockd Performance",
+      "instagram": "lockd_clothing",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "kixkz",
+      "name": "Kixkz",
+      "instagram": "kixkzclothing",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "cold-culture",
+      "name": "Cold Culture",
+      "instagram": "coldculture",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "pistol",
+      "name": "Pistol",
+      "instagram": "pistol.ac",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "nube",
+      "name": "Nube",
+      "instagram": "nubebrand",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "dimoir",
+      "name": "Dimoir",
+      "instagram": "dimoir.ww",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "thirty",
+      "name": "Thirty",
+      "instagram": "thirty.studios",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "together",
+      "name": "Together",
+      "instagram": "branditogether",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "xym",
+      "name": "Xym",
+      "instagram": "xym.clo",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "ouch-lethargic",
+      "name": "Ouch Léthargic",
+      "instagram": "ouch.lethargic",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "lumoncore",
+      "name": "Lumoncore",
+      "instagram": "lumoncore",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "bastard-storage",
+      "name": "Bastard Storage",
+      "instagram": "bastardstorage.studios",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "artifice",
+      "name": "Artifice",
+      "instagram": "artifice.original",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "dog-years",
+      "name": "Dog Years",
+      "instagram": "dogyearsskateclub",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "saturn-citizen",
+      "name": "Saturn Citizen",
+      "instagram": "saturnciti",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "revengex",
+      "name": "RevengeX",
+      "instagram": "revengexstudio",
+      "site": "https://www.rvxstudio.xyz",
+      "logo": "logos/revengex.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "99based",
+      "name": "99Based",
+      "instagram": "99basedlive",
+      "site": "https://99based.com",
+      "logo": "logos/99based.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "bandzon",
+      "name": "BandzOn",
+      "instagram": "bandzzone",
+      "site": "https://bandzon.fr",
+      "logo": "logos/bandzon.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "3izness",
+      "name": "3izness",
+      "instagram": "3izness",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "tcwp",
+      "name": "TCWP",
+      "instagram": "theculturewepractice",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "nostructure",
+      "name": "NoStructure",
+      "instagram": "lahaykal",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "kashmire",
+      "name": "Kashmire",
+      "instagram": "kashmire2889561843569591987",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "cabnetwork",
+      "name": "CABNetwork",
+      "instagram": "cab.network",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "amg-system",
+      "name": "AMG System",
+      "instagram": "amgsystem_",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "finesse",
+      "name": "Finesse",
+      "instagram": "finesse.eu",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "phtmne",
+      "name": "PHTMNE",
+      "instagram": "phtmne",
+      "site": "https://phtmne.com",
+      "logo": "logos/phtmne.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "noiserow",
+      "name": "Noiserow",
+      "instagram": "noiserow_",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "azur",
+      "name": "Azur",
+      "instagram": "azur.ue",
+      "site": "https://azurclothing.com",
+      "logo": "logos/azur.png",
+      "currency": "EUR"
+    },
+    {
+      "id": "flaire",
+      "name": "Flaire",
+      "instagram": "flaire.us",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "idle-time",
+      "name": "Idle Time",
+      "instagram": "idle____time",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "armc",
+      "name": "ARMC",
+      "instagram": "armc3.18",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "army-noisy",
+      "name": "Army Noïsy",
+      "instagram": "armynoisy",
+      "site": "https://armynoisy.com",
+      "logo": "logos/army-noisy.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "a-ez",
+      "name": "A$$EZ",
+      "instagram": "assez_",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "studio-polyvalent",
+      "name": "Studio Polyvalent",
+      "instagram": "studiopolyvalent",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "storey",
+      "name": "Storey",
+      "instagram": "6storey",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "onyx",
+      "name": "Onyx",
+      "instagram": "onyx.sw",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "ascenz",
+      "name": "Ascenz",
+      "instagram": "ascenz.eu",
+      "site": "https://ascenz.eu",
+      "logo": null
+    },
+    {
+      "id": "parkey-wid",
+      "name": "Parkey Wid",
+      "instagram": "parkey.wid",
+      "site": "https://parkeywid.com",
+      "logo": "logos/parkey-wid.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "yazki",
+      "name": "Yazki",
+      "instagram": "yazkineverclearr",
+      "site": "https://yazki.fr",
+      "logo": "logos/yazki.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "shawnny",
+      "name": "Shawnny",
+      "instagram": "shawnny.mtl",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "up-in-flames",
+      "name": "Up In Flames",
+      "instagram": "upinflames",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "tern",
+      "name": "Tern",
+      "instagram": "tern",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "see",
+      "name": "SEE",
+      "instagram": "see11494",
+      "site": "https://see11494.com",
+      "logo": "logos/see.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "atem",
+      "name": "Atem",
+      "instagram": "atem.lab",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "phantom",
+      "name": "Phantom",
+      "instagram": "wrldofphtm",
+      "site": "https://wrldofphtm.com",
+      "logo": "logos/phantom.png",
+      "currency": "USD",
+      "shopify": true
+    },
+    {
+      "id": "xyled",
+      "name": "Xyled",
+      "instagram": "xyled",
+      "site": "https://xyled.online",
+      "logo": "logos/xyled.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "elstar",
+      "name": "Elstar",
+      "instagram": "elstar.hamburg",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "aastu",
+      "name": "Aastu",
+      "instagram": "aastu.vn",
+      "site": "https://aastu.vn",
+      "logo": null
+    },
+    {
+      "id": "rvnt-archive",
+      "name": "RVNT Archive",
+      "instagram": "rvnt.archive",
+      "site": "https://rvntarchive.com",
+      "logo": "logos/rvnt-archive.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "saffath",
+      "name": "Saffath",
+      "instagram": "saffath_id",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "trippie-p",
+      "name": "Trippie P",
+      "instagram": "trippiep.wip",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "alure-hope",
+      "name": "Alure Hope",
+      "instagram": "alurehope",
+      "site": "https://alurehope.us",
+      "logo": "logos/alure-hope.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "omirad",
+      "name": "Omirad",
+      "instagram": "omiradofficial",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "ultralight-london",
+      "name": "Ultralight London",
+      "instagram": "ultralightldn",
+      "site": "https://ultralightlondon.com",
+      "logo": "logos/ultralight-london.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "lonely-wolf",
+      "name": "Lonely Wolf",
+      "instagram": "byalonewolf_",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "brique",
+      "name": "Brique",
+      "instagram": "13rique",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "fuck-this-industry",
+      "name": "Fuck This Industry",
+      "instagram": "fuck.this.industry",
+      "site": "https://fuckthisindustry2008.com",
+      "logo": "logos/fuck-this-industry.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "seesonss",
+      "name": "Seesonss",
+      "instagram": "seesonss",
+      "site": "https://seesonss.com",
+      "logo": "logos/seesonss.png",
+      "currency": "EUR"
+    },
+    {
+      "id": "pain-only-makes-you-stronger",
+      "name": "Pain Only Makes You Stronger",
+      "instagram": "trippiepclothing",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "ambiguite",
+      "name": "Ambiguïté",
+      "instagram": "ambiguite__",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "peak-television",
+      "name": "Peak Television",
+      "instagram": "peaktelevision",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "sheff",
+      "name": "Sheff",
+      "instagram": "shitbysheff",
+      "site": "https://sheff.shop",
+      "logo": "logos/sheff.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "reyzerati",
+      "name": "Reyzerati",
+      "instagram": "reyzerati",
+      "site": "https://reyzerati.com",
+      "logo": "logos/reyzerati.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "wemissu",
+      "name": "WeMissU",
+      "instagram": "wemissuwmu",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "demik",
+      "name": "Demik",
+      "instagram": "demiknj",
+      "site": "https://demiknj.com",
+      "logo": "logos/demik.png",
+      "currency": "USD",
+      "shopify": true
+    },
+    {
+      "id": "redrum",
+      "name": "Redrum",
+      "instagram": "redrum.usa",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "dutreuil",
+      "name": "Dutreuil",
+      "instagram": "dutreuil__",
+      "site": null,
+      "logo": null
+    },
+    {
+      "id": "yg-studios",
+      "name": "YG Studios",
+      "instagram": "y.g.studios",
+      "site": "https://www.yg4eva.com",
+      "logo": "logos/yg-studios.png",
+      "currency": "EUR",
+      "shopify": true
+    },
+    {
+      "id": "belacartes",
+      "name": "Belacartes",
+      "instagram": "belacartess",
+      "site": "https://belacartes.com",
+      "logo": "logos/belacartes.png",
+      "currency": "EUR",
+      "shopify": true
+    }
+  ],
+  "updatedAt": "2026-11-16T21:51:26.235Z"
+}
