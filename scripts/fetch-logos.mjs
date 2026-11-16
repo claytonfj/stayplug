@@ -17,7 +17,7 @@ import { fileURLToPath } from 'node:url';
 
 const DATA = new URL('../public/data/', import.meta.url);
 const LOGOS = fileURLToPath(new URL('../public/logos/', import.meta.url));
-const USER_AGENT = 'Mozilla/5.0 (compatible; StayPlugBot/1.0; agrégateur personnel de marques)';
+const USER_AGENT = 'Mozilla/5.0 (compatible; StayPlugBot/1.0; agregateur personnel de marques)';
 const MIN = 96;
 
 const args = Object.fromEntries(process.argv.slice(2).map((a) => { const [k, v = true] = a.replace(/^--/, '').split('='); return [k, v]; }));

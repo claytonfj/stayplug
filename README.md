@@ -32,6 +32,11 @@ Ouvre http://localhost:4173. Le terminal affiche aussi une adresse pour ton tél
    ```
    Les marques qui ne sont pas sous Shopify restent visibles dans l'onglet Marques
    avec leur lien, mais sans articles.
+4. Photos de profil Instagram des marques (logos) :
+   ```sh
+   npm run insta            # toutes les marques
+   npm run insta -- --missing   # seulement celles sans logo
+   ```
 
 `npm run demo` remet les données de démonstration.
 
