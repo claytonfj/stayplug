@@ -86,6 +86,10 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 4 6.5 5.5 11 8 10v10h8V10l2.5 1L20 6.5 15 4c-.5 1.5-1.6 2.5-3 2.5S9.5 5.5 9 4z"/></svg>
       <span>Articles</span>
     </button>
+    <button data-view="nouveautes">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.7 1.8 1.8.7-1.8.7L19 21l-.7-1.8-1.8-.7 1.8-.7z"/></svg>
+      <span>Nouveautés</span><b class="tab-badge" id="newBadge" hidden></b>
+    </button>
     <button data-view="favoris">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
       <span>Favoris</span>
@@ -114,6 +118,10 @@
         <label><span>Min</span><input id="pmin" type="number" inputmode="numeric" min="0" placeholder="0"> €</label>
         <label><span>Max</span><input id="pmax" type="number" inputmode="numeric" min="0" placeholder="∞"> €</label>
       </div>
+
+      <h3>Ta taille</h3>
+      <div id="sizePills"></div>
+      <p class="size-note" id="sizeNote"></p>
 
       <label class="switch">
         <span>En promotion uniquement</span>

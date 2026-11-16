@@ -1,6 +1,6 @@
 // Cache hors-ligne : l'interface en priorité depuis le cache, les données
 // depuis le réseau (avec repli sur le cache), les images en cache.
-const VERSION = 'stayplug-v17';
+const VERSION = 'stayplug-v18';
 const SHELL = ['./', 'index.html', 'app.css', 'app.js', 'logo.png', 'manifest.webmanifest', 'icons/favicon-32.png', 'icons/favicon-96.png', 'icons/icon-180.png', 'icons/icon-192.png'];
 const IMG_CACHE = 'stayplug-img';
 const IMG_MAX = 300;

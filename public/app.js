@@ -54,6 +54,13 @@ const HEART = svg('M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10
 const X = svg('M6 6l12 12M18 6 6 18', 24);
 const EXT = svg('M14 5h5v5M19 5l-8 8M17 14v5H5V7h5', 24);
 const PAGE = 24;
+const VIEWS = ['articles', 'nouveautes', 'marques', 'favoris'];
+// Onglet Nouveautés : articles sortis ces 14 derniers jours.
+const NEW_DAYS = 14;
+const DAY = 864e5;
+const NEW_CUTOFF = Date.now() - NEW_DAYS * DAY;
+// Tailles proposées dans les filtres (seules celles présentes dans le catalogue sont affichées).
+const LETTERS = ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'];
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -68,7 +75,7 @@ const store = {
 };
 
 const state = {
-  view: ['articles', 'marques', 'favoris'].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'marques',
+  view: VIEWS.includes(location.hash.slice(1)) ? location.hash.slice(1) : 'marques',
   cat: 'all',
   sub: 'all',
   q: '',
@@ -76,6 +83,7 @@ const state = {
   pmin: null,
   pmax: null,
   sale: false,
+  sizes: new Set(),
   sort: 'new',
   shown: PAGE,
 };
@@ -92,7 +100,10 @@ const fav = { products: new Set(), brands: new Set() };
 function loadFavs() {
   fav.products = new Set(profile ? store.get(`fav-products:${profile.id}`, []) : []);
   fav.brands = new Set(profile ? store.get(`fav-brands:${profile.id}`, []) : []);
+  // Chaque profil garde ses tailles d'un passage à l'autre.
+  state.sizes = new Set(profile ? store.get(`sizes:${profile.id}`, []) : []);
 }
+const saveSizes = () => profile && store.set(`sizes:${profile.id}`, [...state.sizes]);
 loadFavs();
 
 let BRANDS = [];
@@ -114,6 +125,10 @@ async function load() {
     x._f = FAMILY_OF.get(x.category);
     x._t = norm(`${x.title} ${brandById.get(x.brandId).name} ${CAT_LABEL[x.category] || ''}`);
     x._d = Date.parse(x.createdAt) || 0;
+    // Jetons de taille : "L:M" (lettres), "S:42" (pointure), "W:32" (tour de taille), "TU".
+    x._s = (x.sizes || []).flatMap((z) =>
+      z === 'TU' ? ['TU'] : LETTERS.includes(z) ? [`L:${z}`]
+        : x._f === 'chaussures' ? [`S:${z}`] : x._f === 'bas' ? [`W:${z}`] : []);
   }
   $('#demo').hidden = !b.demo;
   if (b.updatedAt) {
@@ -131,6 +146,8 @@ function filtered({ ignoreCat = false } = {}) {
     (state.pmin == null || p.price >= state.pmin) &&
     (state.pmax == null || p.price <= state.pmax) &&
     (!state.sale || p.compareAt) &&
+    (!state.sizes.size || p._s.includes('TU') || p._s.some((z) => state.sizes.has(z))) &&
+    (state.view !== 'nouveautes' || p._d >= NEW_CUTOFF) &&
     q.every((w) => p._t.includes(w))
   );
 }
@@ -179,6 +196,8 @@ function sorted(list) {
   const s = state.sort;
   if (s === 'price-asc') return list.sort((a, b) => a.price - b.price);
   if (s === 'price-desc') return list.sort((a, b) => b.price - a.price);
+  // Nouveautés : la plus récente d'abord, sans mélanger.
+  if (state.view === 'nouveautes') return list.sort((a, b) => b._d - a._d);
   return mixBrands(list);
 }
 
@@ -201,6 +220,8 @@ function productCard(p) {
          sizes="(min-width:960px) 25vw, (min-width:640px) 33vw, 50vw" alt="${esc(p.title)}" loading="lazy" decoding="async">`
     : `<div class="ph" style="--h:${hue(b.id)}">${svg(ICONS[p.category] || ICONS[ICON_OF[p.category]] || ICONS.autres)}</div>`;
   const tag = p.url ? 'a' : 'div';
+  const sizes = (p.sizes || []).filter((z) => z !== 'TU');
+  const orig = p.origCurrency ? `<span class="orig" title="Prix d'origine, converti au taux du jour">${money(p.origPrice, p.origCurrency)}</span>` : '';
   const href = p.url ? ` href="${esc(p.url)}" target="_blank" rel="noopener"` : '';
   return `<${tag} class="card"${href}>
     <div class="media">${media}
@@ -210,9 +231,16 @@ function productCard(p) {
     <div class="info">
       <div class="brand-name">${esc(b.name)}</div>
       <div class="title">${esc(p.title)}</div>
-      <div class="price"><span class="now${p.compareAt ? ' discount' : ''}">${money(p.price, p.currency)}</span>${p.compareAt ? `<s>${money(p.compareAt, p.currency)}</s>` : ''}</div>
+      <div class="price"><span class="now${p.compareAt ? ' discount' : ''}">${money(p.price, p.currency)}</span>${p.compareAt ? `<s>${money(p.compareAt, p.currency)}</s>` : ''}${orig}</div>
+      ${sizes.length ? `<div class="sizes">${esc(sizes.join(' · '))}</div>` : ''}
+      ${state.view === 'nouveautes' ? `<div class="when">${ago(p._d)}</div>` : ''}
     </div>
   </${tag}>`;
+}
+
+function ago(t) {
+  const d = Math.floor((Date.now() - t) / DAY);
+  return d <= 0 ? 'Aujourd’hui' : d === 1 ? 'Hier' : `Il y a ${d} jours`;
 }
 
 function logoHtml(b) {
@@ -268,11 +296,14 @@ function renderActiveFilters() {
   if (state.pmin != null) tags.push(['pmin', `≥ ${money(state.pmin)}`]);
   if (state.pmax != null) tags.push(['pmax', `≤ ${money(state.pmax)}`]);
   if (state.sale) tags.push(['sale', 'En promo']);
+  if (state.sizes.size) tags.push(['sizes', `Taille ${sizeLabel([...state.sizes])}`]);
   $('#activeFilters').innerHTML = tags.map(([k, l]) => `<button class="tag" data-remove="${esc(k)}">${esc(l)} ${X}</button>`).join('');
-  const n = state.brands.size + (state.pmin != null) + (state.pmax != null) + state.sale;
+  const n = state.brands.size + (state.pmin != null) + (state.pmax != null) + state.sale + (state.sizes.size > 0);
   $('#filterBadge').hidden = !n;
   $('#filterBadge').textContent = n;
 }
+
+const sizeLabel = (list) => list.map((z) => (z.startsWith('W:') ? `W${z.slice(2)}` : z.slice(2))).join(', ');
 
 let currentList = [];
 function renderArticles() {
@@ -280,7 +311,9 @@ function renderArticles() {
   renderActiveFilters();
   currentList = sorted(filtered());
   const n = currentList.length;
-  $('#count').textContent = `${n} article${n > 1 ? 's' : ''}`;
+  $('#count').textContent = state.view === 'nouveautes'
+    ? `${n} nouveauté${n > 1 ? 's' : ''} · ${NEW_DAYS} derniers jours`
+    : `${n} article${n > 1 ? 's' : ''}`;
   $('#grid').innerHTML = currentList.slice(0, state.shown).map(productCard).join('');
   $('#empty').hidden = n > 0;
 }
@@ -318,13 +351,28 @@ function renderFavs() {
   $('#favEmpty').hidden = bs.length || ps.length;
 }
 
+// Badge de l'onglet Nouveautés : articles sortis depuis la dernière visite de l'onglet.
+function seenKey() { return profile ? `seen-new:${profile.id}` : 'seen-new'; }
+function renderNewBadge() {
+  if (state.view === 'nouveautes') store.set(seenKey(), Date.now());
+  const seen = store.get(seenKey(), Date.now() - 3 * DAY);
+  const n = PRODUCTS.filter((p) => p._d > seen && p._d >= NEW_CUTOFF && p._d <= Date.now()).length;
+  $('#newBadge').hidden = !n || state.view === 'nouveautes';
+  $('#newBadge').textContent = n > 99 ? '99+' : n;
+}
+
 function render() {
-  for (const v of ['articles', 'marques', 'favoris']) $(`#view-${v}`).hidden = state.view !== v;
+  const list = state.view === 'articles' || state.view === 'nouveautes';
+  $('#view-articles').hidden = !list;
+  for (const v of ['marques', 'favoris']) $(`#view-${v}`).hidden = state.view !== v;
   document.querySelectorAll('.tabbar button').forEach((b) => b.classList.toggle('active', b.dataset.view === state.view));
-  $('#chips').hidden = state.view !== 'articles';
-  if (state.view !== 'articles') $('#subchips').hidden = true;
+  $('#chips').hidden = !list;
+  if (!list) $('#subchips').hidden = true;
   $('#q').placeholder = state.view === 'marques' ? 'Rechercher une marque…' : 'Rechercher un article, une marque…';
-  if (state.view === 'articles') renderArticles();
+  $('#empty').querySelector('p').textContent = state.view === 'nouveautes'
+    ? `Aucune nouveauté ces ${NEW_DAYS} derniers jours avec ces filtres.` : 'Aucun article ne correspond.';
+  renderNewBadge();
+  if (list) renderArticles();
   else if (state.view === 'marques') renderBrands();
   else renderFavs();
 }
@@ -346,9 +394,24 @@ function openSheet() {
   $('#pmin').value = state.pmin ?? '';
   $('#pmax').value = state.pmax ?? '';
   $('#sale').checked = state.sale;
+  renderSizePills();
   $('#sheet').hidden = $('#backdrop').hidden = false;
   document.body.classList.add('no-scroll');
   previewCount();
+}
+
+// Tailles présentes dans le catalogue, groupées : lettres, tour de taille, pointures.
+function renderSizePills() {
+  const have = new Set(PRODUCTS.flatMap((p) => p._s));
+  const nums = (pre) => [...have].filter((z) => z.startsWith(pre)).sort((a, b) => a.slice(2) - b.slice(2));
+  const groups = [
+    ['Hauts, vestes…', LETTERS.map((z) => `L:${z}`).filter((z) => have.has(z))],
+    ['Tour de taille (jeans, pantalons)', nums('W:')],
+    ['Pointure (EU)', nums('S:')],
+  ];
+  $('#sizePills').innerHTML = groups.filter(([, l]) => l.length).map(([label, l]) => `<p class="size-group">${label}</p>
+    <div class="pills">${l.map((z) => `<button data-size="${z}" class="${state.sizes.has(z) ? 'active' : ''}" aria-pressed="${state.sizes.has(z)}">${z.startsWith('W:') ? 'W' : ''}${z.slice(2)}</button>`).join('')}</div>`).join('');
+  $('#sizeNote').textContent = profile ? `Enregistrées pour ${profile.name}. Les articles taille unique restent affichés.` : '';
 }
 
 function closeSheet() {
@@ -363,6 +426,7 @@ function readSheet() {
     pmin: num($('#pmin').value),
     pmax: num($('#pmax').value),
     sale: $('#sale').checked,
+    sizes: new Set([...document.querySelectorAll('#sizePills .active')].map((b) => b.dataset.size)),
     brands: new Set([...document.querySelectorAll('#brandChecks input:checked')].map((i) => i.value)),
   };
 }
@@ -420,6 +484,7 @@ document.addEventListener('click', (e) => {
     const k = t.dataset.remove;
     if (k.startsWith('brand:')) state.brands.delete(k.slice(6));
     else if (k === 'sale') state.sale = false;
+    else if (k === 'sizes') { state.sizes = new Set(); saveSizes(); }
     else state[k] = null;
     return update();
   }
@@ -428,6 +493,11 @@ document.addEventListener('click', (e) => {
     history.replaceState(null, '', `#${t.dataset.view}`);
     update({ view: t.dataset.view });
     return window.scrollTo({ top: 0 });
+  }
+  if (t.dataset.size) {
+    t.classList.toggle('active');
+    t.setAttribute('aria-pressed', t.classList.contains('active'));
+    return previewCount();
   }
   if (t.dataset.sort) {
     document.querySelectorAll('#sortPills button').forEach((b) => b.classList.toggle('active', b === t));
@@ -453,18 +523,20 @@ $('#openFilters').addEventListener('click', openSheet);
 $('#closeFilters').addEventListener('click', closeSheet);
 $('#backdrop').addEventListener('click', closeSheet);
 $('#sheet').addEventListener('input', previewCount);
-$('#applyFilters').addEventListener('click', () => { update(readSheet()); closeSheet(); window.scrollTo({ top: 0 }); });
+$('#applyFilters').addEventListener('click', () => { update(readSheet()); saveSizes(); closeSheet(); window.scrollTo({ top: 0 }); });
 $('#resetFilters').addEventListener('click', () => {
   document.querySelectorAll('#brandChecks input').forEach((i) => (i.checked = false));
   document.querySelectorAll('#sortPills button').forEach((b) => b.classList.toggle('active', b.dataset.sort === 'new'));
   $('#pmin').value = $('#pmax').value = '';
   $('#sale').checked = false;
+  document.querySelectorAll('#sizePills button').forEach((b) => b.classList.remove('active'));
   previewCount();
 });
 $('#resetAll').addEventListener('click', () => {
   $('#q').value = '';
   $('#clearQ').hidden = true;
-  update({ cat: 'all', sub: 'all', q: '', brands: new Set(), pmin: null, pmax: null, sale: false });
+  update({ cat: 'all', sub: 'all', q: '', brands: new Set(), pmin: null, pmax: null, sale: false, sizes: new Set() });
+  saveSizes();
 });
 document.addEventListener('keydown', (e) => {
   if (e.key !== 'Escape') return;
@@ -479,7 +551,7 @@ document.addEventListener('error', (e) => {
 }, true);
 
 new IntersectionObserver((entries) => {
-  if (entries[0].isIntersecting && state.view === 'articles') renderMore();
+  if (entries[0].isIntersecting && (state.view === 'articles' || state.view === 'nouveautes')) renderMore();
 }, { rootMargin: '800px' }).observe($('#sentinel'));
 
 /* ---------- Profils ---------- */

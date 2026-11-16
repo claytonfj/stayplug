@@ -8,6 +8,7 @@
 
 import { readFile, writeFile } from 'node:fs/promises';
 import { categorize, isClothing, isWomenOnly, normalize } from './categorize.mjs';
+import { sizesOf, UNPARSED } from './sizes.mjs';
 
 const DATA = new URL('../public/data/', import.meta.url);
 const USER_AGENT = 'StayPlugBot/1.0 (agrégateur personnel de marques)';
@@ -42,16 +43,47 @@ async function getJson(url, tries = 3) {
   throw new Error('trop de requêtes (429), réessaie plus tard');
 }
 
+// Taux de change du jour (BCE, gratuit, sans clé) : 1 EUR = x devise.
+async function eurRates() {
+  try {
+    const res = await fetch('https://api.frankfurter.dev/v1/latest?base=EUR', { signal: AbortSignal.timeout(15000) });
+    const j = await res.json();
+    return { EUR: 1, ...j.rates };
+  } catch {
+    console.log('Taux de change indisponibles : prix gardés dans leur devise.');
+    return { EUR: 1 };
+  }
+}
+const RATES = await eurRates();
+
+// Prix en euros, arrondi à l'euro (ou au centime pour les petits prix).
+const toEur = (n, cur) => {
+  if (n == null) return null;
+  const r = RATES[cur];
+  if (!r || cur === 'EUR') return n;
+  const v = n / r;
+  return v < 20 ? Math.round(v * 100) / 100 : Math.round(v);
+};
+
 // Lit la page d'accueil : logo et devise de la boutique.
+// La devise vient de /meta.json (devise de base de la boutique, celle de
+// /products.json) : la page d'accueil, elle, change de devise selon le pays du visiteur.
 async function shopInfo(site) {
   const info = { logo: null, currency: null };
+  try {
+    const meta = await fetch(new URL('/meta.json', site), {
+      headers: { 'User-Agent': USER_AGENT, Accept: 'application/json' },
+      signal: AbortSignal.timeout(15000),
+    });
+    if (meta.ok) info.currency = (await meta.json()).currency || null;
+  } catch {}
   try {
     const res = await fetch(site, {
       headers: { 'User-Agent': USER_AGENT },
       signal: AbortSignal.timeout(15000),
     });
     const html = await res.text();
-    info.currency = html.match(/Shopify\.currency\s*=\s*\{"active":"([A-Z]{3})"/)?.[1] || null;
+    info.currency ||= html.match(/Shopify\.currency\s*=\s*\{"active":"([A-Z]{3})"/)?.[1] || null;
     const m =
       html.match(/<link[^>]+rel=["']apple-touch-icon[^"']*["'][^>]*href=["']([^"']+)["']/i) ||
       html.match(/<link[^>]+href=["']([^"']+)["'][^>]*rel=["']apple-touch-icon[^"']*["']/i) ||
@@ -67,17 +99,24 @@ function toProduct(p, brand, origin) {
   const price = prices.length ? Math.min(...prices) : null;
   const cheapest = variants.find((v) => Number(v.price) === price);
   const compareAt = cheapest && Number(cheapest.compare_at_price) > price ? Number(cheapest.compare_at_price) : null;
+  const cur = brand.currency || 'EUR';
+  const category = categorize({ productType: p.product_type, title: p.title, tags: p.tags });
+  const shoe = ['sneakers', 'boots', 'claquettes', 'chaussures'].includes(category);
+  const converted = cur !== 'EUR' && RATES[cur];
   return {
     id: `${brand.id}-${p.id}`,
     brandId: brand.id,
     title: p.title,
     type: p.product_type || undefined,
-    price,
-    compareAt,
-    currency: brand.currency || 'EUR',
+    price: toEur(price, cur),
+    compareAt: toEur(compareAt, cur),
+    currency: converted || cur === 'EUR' ? 'EUR' : cur,
+    // Prix d'origine, affiché en petit quand il a été converti.
+    ...(converted ? { origPrice: price, origCurrency: cur } : {}),
+    sizes: sizesOf(p, shoe),
     image: p.images?.[0]?.src || null,
     url: `${origin}/products/${p.handle}`,
-    category: categorize({ productType: p.product_type, title: p.title, tags: p.tags }),
+    category,
     available: variants.some((v) => v.available !== false),
     createdAt: p.published_at || p.created_at,
   };
@@ -143,6 +182,12 @@ const known = new Set(brandsFile.brands.map((b) => b.id));
 const products = [...byBrand.entries()]
   .filter(([id]) => known.has(id))
   .flatMap(([, list]) => list);
+// Articles gardés d'une marque qui n'a pas répondu : prix encore dans leur devise.
+for (const p of products) {
+  if (p.currency !== 'EUR' && RATES[p.currency]) {
+    Object.assign(p, { origPrice: p.price, origCurrency: p.currency, price: toEur(p.price, p.currency), compareAt: toEur(p.compareAt, p.currency), currency: 'EUR' });
+  }
+}
 
 const now = new Date().toISOString();
 delete brandsFile.demo;
@@ -150,3 +195,6 @@ brandsFile.updatedAt = now;
 await writeFile(new URL('brands.json', DATA), JSON.stringify(brandsFile, null, 2));
 await writeFile(new URL('products.json', DATA), JSON.stringify({ updatedAt: now, products }));
 console.log(`\n${products.length} articles au total, ${brandsFile.brands.length} marques.`);
+if (process.env.SIZES_DEBUG) {
+  await writeFile(process.env.SIZES_DEBUG, [...UNPARSED].sort((a, b) => b[1] - a[1]).map(([v, n]) => `${n}\t${v}`).join('\n'));
+}
