@@ -1917,7 +1917,16 @@
       "logo": "logos/belacartes.png",
       "currency": "USD",
       "shopify": true
+    },
+    {
+      "id": "6rwstore",
+      "name": "6RW Store",
+      "instagram": "6rwstore",
+      "site": "https://6rawstore.com",
+      "logo": "logos/6rwstore.png",
+      "shopify": true,
+      "currency": "EUR"
     }
   ],
-  "updatedAt": "2026-11-16T22:33:41.385Z"
+  "updatedAt": "2026-11-17T12:54:01.941Z"
 }
