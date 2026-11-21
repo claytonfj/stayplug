@@ -771,7 +771,7 @@
       "instagram": "chromecrosses_",
       "site": "https://chromecrossess.com",
       "logo": "logos/chrome-crosses.png",
-      "currency": "EUR"
+      "currency": "USD"
     },
     {
       "id": "verborgen",
@@ -1517,7 +1517,7 @@
       "site": "https://99based.com",
       "logo": "logos/99based.png",
       "currency": "EUR",
-      "shopify": false
+      "shopify": true
     },
     {
       "id": "bandzon",
@@ -1930,5 +1930,5 @@
       "currency": "EUR"
     }
   ],
-  "updatedAt": "2026-11-20T12:41:11.478Z"
+  "updatedAt": "2026-11-21T12:17:18.949Z"
 }
