@@ -1206,7 +1206,8 @@
       "instagram": "sixshooter.studio",
       "site": "https://sixshooter.store",
       "logo": "logos/sixshooter.png",
-      "currency": "USD"
+      "currency": "USD",
+      "shopify": true
     },
     {
       "id": "maison-de-cozy",
@@ -1930,5 +1931,5 @@
       "currency": "EUR"
     }
   ],
-  "updatedAt": "2026-11-25T14:03:56.081Z"
+  "updatedAt": "2026-11-26T13:42:52.560Z"
 }
