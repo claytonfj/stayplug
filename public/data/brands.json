@@ -526,7 +526,8 @@
       "instagram": "inthe1ris",
       "site": "https://intheiris.com",
       "logo": "logos/intheiris.png",
-      "currency": "GBP"
+      "currency": "GBP",
+      "shopify": true
     },
     {
       "id": "romance-is-dead",
@@ -910,7 +911,8 @@
       "instagram": "renaissancegarments",
       "site": "https://www.renaissancegarments.com",
       "logo": "logos/renaissance.png",
-      "currency": "CHF"
+      "currency": "CHF",
+      "shopify": true
     },
     {
       "id": "paradox",
@@ -1931,5 +1933,5 @@
       "currency": "EUR"
     }
   ],
-  "updatedAt": "2026-11-26T13:42:52.560Z"
+  "updatedAt": "2026-11-27T13:39:09.196Z"
 }
