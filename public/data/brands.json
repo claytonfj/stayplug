@@ -772,7 +772,8 @@
       "instagram": "chromecrosses_",
       "site": "https://chromecrossess.com",
       "logo": "logos/chrome-crosses.png",
-      "currency": "USD"
+      "currency": "USD",
+      "shopify": true
     },
     {
       "id": "verborgen",
@@ -979,7 +980,8 @@
       "instagram": "ctzen.xyz",
       "site": "https://www.ctzen.xyz",
       "logo": "logos/ctzen.png",
-      "currency": "GBP"
+      "currency": "GBP",
+      "shopify": true
     },
     {
       "id": "faith-by-luis",
@@ -1239,7 +1241,8 @@
       "instagram": "allurecounty",
       "site": "https://www.allurecounty.com",
       "logo": "logos/allure-county.png",
-      "currency": "USD"
+      "currency": "USD",
+      "shopify": true
     },
     {
       "id": "life-of-errors",
@@ -1602,7 +1605,8 @@
       "instagram": "azur.ue",
       "site": "https://azurclothing.com",
       "logo": "logos/azur.png",
-      "currency": "EUR"
+      "currency": "EUR",
+      "shopify": true
     },
     {
       "id": "flaire",
@@ -1933,5 +1937,5 @@
       "currency": "EUR"
     }
   ],
-  "updatedAt": "2026-11-27T13:39:09.196Z"
+  "updatedAt": "2026-11-28T12:52:42.313Z"
 }
